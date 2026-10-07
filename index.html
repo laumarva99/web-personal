@@ -2,94 +2,173 @@
 <html lang="es">
 
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Página de ejemplo para aprender HTML">
-        <meta name="theme-color" content="#ffffff">
-        <meta property="og:title" content="Mi página web">
-        <meta property="og:description" content="Una página de ejemplo HTML">
-        <meta property="og:type" content="website">
-        <meta property="og:image" content="https://ejemplo.com/imagen.jpg">
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Mi página web">
-        <meta name="twitter:description" content="Una página de ejemplo HTML">
-        <meta name="twitter:image" content="https://ejemplo.com/imagen.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de ejemplo para aprender HTML">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:title" content="Mi página web">
+    <meta property="og:description" content="Una página de ejemplo HTML">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://ejemplo.com/imagen.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mi página web">
+    <meta name="twitter:description" content="Una página de ejemplo HTML">
+    <meta name="twitter:image" content="https://ejemplo.com/imagen.jpg">
 
     <title>Réplica de prueba Minimalist-Design-Student-Portfolio</title>
 
-     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
         rel="stylesheet">
 
-     <style>  
-
+    <style>
         body {
-        font-family: 'Source Serif 4, serif;
-        } 
+            font-family: 'Source Serif 4, sans-serif';
+        }
+
         .container {
-        max-width: 80 vw;
-        margin: 3rem;
+            max-width: 80vw;
+            margin: 3rem;
         }
 
         h2 {
-            font-family: 'Source Serif 4;
+            font-family: 'Source Serif 4, sans-serif';
             font-style: normal;
             font-weight: 300;
             font-size: 50px;
             line-height: 120%;
             /* o 60px */
             letter-spacing: -0.045em;
-         }
-
-
-         .header {
-         width: 100%;
-         padding: 30px 40px;
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-         }
-
-
-         .profile-image {
-         display: flex;
-         align-items: center;
-         gap: 12px;
-         }
-         .profile-image .img {
-         width: 45px;
-         height: 45px;
-         object-fit: cover;
-         border-radius: 50%;
-         }
-         .profile-image .a {
-         font-size: 18px;
-         font-weight: 500;
-         }
-
-
-         .navigation {
-         display: flex;
-         gap: 30px;
         }
-         .navigation .a {
-         font-size: 16px;
-         text-decoration: none;
-         font-size: 16px;
-         }
-         .navigation a:nth-child(1) {
-         color: #AB0782;
-         }
-         .navigation .a:nth-child(2) {
-         color: #7F750E;
-        }
-         .navigation .a:nth-child(3) {
-         color: #5F00AD;
-         }
 
+        /* HEADER */
+
+        .header {
+            width: 100%;
+            padding: 30px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .profile-image {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .profile-image .img {
+            width: 45px;
+            height: 45px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .profile-image .a {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+
+        .navigation {
+            display: flex;
+            gap: 30px;
+        }
+
+        .navigation .a {
+            font-size: 16px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .navigation a:nth-child(1) {
+            color: #AB0782;
+        }
+
+        .navigation .a:nth-child(2) {
+            color: #7F750E;
+        }
+
+        .navigation .a:nth-child(3) {
+            color: #5F00AD;
+        }
+
+
+        /* BODY */
+
+        article {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .project a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .project button {
+            color: inherit;
+            background-color: transparent;
+            border: 1px solid currentColor;
+        }
+
+        .project-info_yoga {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 40%;
+            color: #0034AD;
+        }
+
+        .project-info_abstract {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 40%;
+            color: #AB0782;
+        }
+
+        .project-info_magazine {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 40%;
+            color: #6E660A;
+        }
+
+        .project-info_photography {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 40%;
+            color: #5F00AD;
+        }
+
+        .project-info_castro {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 40%;
+            color: #0034AD;
+        }
+
+
+
+        .project-image {
+            width: 50%;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
     </style>
 </head>
 
@@ -97,170 +176,158 @@
 <body>
     <div class="container">
 
-    <header class="header">
+        <header class="header">
 
-         <div class="profile-image">
-                    <img
-                        src="./assets/Imageperfil.png"
-                        alt="Profile picture of Sarah Chen"
-                        width="92" height="93"
-                    >
+            <div class="profile-image">
+                <img src="./assets/Imageperfil.png" alt="Profile picture of Sarah Chen" width="92" height="93">
 
-                     <h3>Sarah Chen</h3>
-         </div>
+                <h3>Sarah Chen</h3>
+            </div>
 
-         <nav class="navigation"> 
+            <nav class="navigation">
 
-            <a href="./home.html">Home</a> 
-            <a href="./about.html">About</a> 
-            <a href="https://figma.com/sites">Contact</a>
+                <a href="./home.html">Home</a>
+                <a href="./about.html">About</a>
+                <a href="https://figma.com/sites">Contact</a>
 
-        </nav>
+            </nav>
 
-    </header>
-<br>
-<br>
- <main>
-        <section>
-            <h2>I'm Sarah Chen, design student and explorer of visual languages. I'm passionate about understanding how different design disciplines intersect and create meaningful connections.</h2>
-        </section>
+        </header>
+        <br>
+        <br>
+        <main>
+            <section>
+                <h2>I'm Sarah Chen, design student and explorer of visual languages. I'm passionate about understanding
+                    how different design disciplines intersect and create meaningful connections.</h2>
+            </section>
 
-        <section>
-           
-            <article>
-                 <a href="./desing.html">Desing</a>
-                <h3>Yoga studio rebrand</h3>
-                  <button type="Explore">
-                   Explore
-                </button>
+            <section>
 
-                 <div class="project-image">
-                    <img
-                        src="./assets/imgyoga.png"
-                        alt="Yoga studio rebrand project"
-                    >
-                </div>
+                <article class="project">
+                    <div class="project-info_yoga">
+                        <a href="./desing.html">Desing</a>
+                        <h2>Yoga studio rebrand</h2>
+                        <button type="Explore">
+                            Explore
+                        </button>
+                    </div>
 
-            </article>
-            
-            <br>
-            <br>
-
-
-
-            <article>
-
-
-                <a href="./artwork.html">Artwork</a>
-                <h3>Abstract paintings</h3>
-                  <button type="Explore">
-                   Explore
-                </button>
-
-                <div class="project-image">
-                    <img
-                        src="./assets/Imgabstract.png"
-                        alt="Abstract paintings artwork"
-                    >
-                </div>
-
-            </article>
-
-            <br>
-            <br>
-
-            <article>
-
-                <a href="./design.html">Design</a>
-                <h3>Magazine study</h3>
-                  <button type="Explore">
-                   Explore
-                </button>
-
-                <div class="project-image">
-                    <img
-                        src="./assets/Imgmagazine.png"
-                        alt="Magazine study design project"
-                    >
-                </div>
-
-            </article>
-            
-            <br>
-            <br>
-            
-            <article>
-
-                <a href="./photography.html">Photography</a>
-                <h3>Echoes of Italy</h3>
-                  <button type="Explore">
-                   Explore
-                </button>
-
-                
                     <div class="project-image">
-                    <img
-                        src="./assets/Imgphotography.png"
-                        alt="Photography project Echoes of Italy"
-                    >
-                     </div>
-            </article>
-            
-            <br>
-            <br>
-            
-            <article>
+                        <img src="./assets/imgyoga.png" alt="Yoga studio rebrand project">
+                    </div>
 
-                <a href="./design.html">Design</a>
-                <h3>Castro Capital branding</h3>
-                  <button type="Explore">
-                   Explore
+                </article>
+
+                <br>
+                <br>
+
+
+
+                <article class="project">
+
+                    <div class="project-info_abstract">
+                        <a href="./artwork.html">Artwork</a>
+                        <h2>Abstract paintings</h2>
+                        <button type="Explore">
+                            Explore
+                        </button>
+                    </div>
+
+                    <div class="project-image">
+                        <img src="./assets/Imgabstract.png" alt="Abstract paintings artwork">
+                    </div>
+
+                </article>
+
+                <br>
+                <br>
+
+                <article class="project">
+                    <div class="project-info_magazine">
+                        <a href="./design.html">Design</a>
+                        <h2>Magazine study</h2>
+                        <button type="Explore">
+                            Explore
+                        </button>
+                    </div>
+                    <div class="project-image">
+                        <img src="./assets/Imgmagazine.png" alt="Magazine study design project">
+                    </div>
+
+                </article>
+
+                <br>
+                <br>
+
+                <article class="project">
+                    <div class="project-info_photography">
+                        <a href="./photography.html">Photography</a>
+                        <h2>Echoes of Italy</h2>
+                        <button type="Explore">
+                            Explore
+                        </button>
+                    </div>
+
+                    <div class="project-image">
+                        <img src="./assets/Imgphotography.png" alt="Photography project Echoes of Italy">
+                    </div>
+                </article>
+
+                <br>
+                <br>
+
+                <article class="project">
+
+                    <div class="project-info_castro">
+                        <a href="./design.html">Design</a>
+                        <h2>Castro Capital branding</h2>
+                        <button type="Explore">
+                            Explore
+                        </button>
+                    </div>
+
+
+                    <div class="project-image">
+                        <img src="./assets/Imgcastro.png" alt="Castro Capital branding project">
+                    </div>
+
+                </article>
+
+            </section>
+
+            <br>
+            <br>
+            <br>
+
+            <section>
+                <h2>I'm dedicated to crafting meaningful visual experiences through a multidisciplinary design approach.
+                </h2>
+                <br>
+                <button type="Explore">
+                    Discover my skills and passions
                 </button>
-
-                
-                <div class="project-image">
-                    <img
-                        src="./assets/Imgcastro.png"
-                        alt="Castro Capital branding project"
-                    >
-                </div>
-
-            </article>
-
-        </section>
-        
-        <br>
-        <br>
-        <br>
-        
-        <section>
-            <h2>I'm dedicated to crafting meaningful visual experiences through a multidisciplinary design approach.</h2>
+            </section>
             <br>
-            <button type="Explore">
-                   Discover my skills and passions
-                </button>
-        </section>
-        <br>
-        <br>
-    
+            <br>
+
 </body>
 
- <footer>
+<footer>
 
-        <nav>
-
-
-            <a href="https://www.figma.com/sites">Email</a> 
-            <a href="https://www.figma.com/sites">Behance</a> 
-            <a href="http://linkedin.com/company/figma">LinkedIn</a>
+    <nav>
 
 
-        </nav>
+        <a href="https://www.figma.com/sites">Email</a>
+        <a href="https://www.figma.com/sites">Behance</a>
+        <a href="http://linkedin.com/company/figma">LinkedIn</a>
 
-        <h2>
-            © Sarah Chen 2025 All Rights Reserved
-        </h2>
 
-    </footer>
+    </nav>
+
+    <h2>
+        © Sarah Chen 2025 All Rights Reserved
+    </h2>
+
+</footer>
 
 </html>
