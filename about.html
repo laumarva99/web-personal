@@ -6,44 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>(About) Réplica de prueba Minimalist-Design-Student-Portfolio</title>
 
-<style>
-    @font-face {
-    font-family: 'Source Serif 4';
-    src: url('C:\Users\albi5\proyectos\web-personal\assets\fonts\SourceSerif4-VariableFont_opsz,wght.ttf') format('truetype');
-    font-weight: 200 900;
-    font-style: normal;
-    font-display: swap;
-}
+    <style>
+        @font-face {
+            font-family: 'Source Serif 4';
+            src: url('C:\Users\albi5\proyectos\web-personal\assets\fonts\SourceSerif4-VariableFont_opsz,wght.ttf') format('truetype');
+            font-weight: 200 900;
+            font-style: normal;
+            font-display: swap;
+        }
 
-@font-face {
-    font-family: 'Source Serif 4';
-    src: url('../assets/fonts/SourceSerif4-VariableFont_opsz,wght.ttf') format('truetype');
-    font-weight: 200 900;
-    font-style: italic;
-    font-display: swap;
-}
+        @font-face {
+            font-family: 'Source Serif 4';
+            src: url('../assets/fonts/SourceSerif4-VariableFont_opsz,wght.ttf') format('truetype');
+            font-weight: 200 900;
+            font-style: italic;
+            font-display: swap;
+        }
 
-body {
-    font-family: 'Source Serif 4';
-}
+        body {
+            font-family: 'Source Serif 4';
+        }
 
-:root {
-    --color-text: #111111;
-    --color-bg: #ffffff;
- 
-    --color-pink: #AB0782;
-    --color-olive: #7F750E;
-    --color-olive-dark: #6E660A;
-    --color-purple: #5F00AD;
-    --color-blue: #0034AD;
- 
-    --font-main: 'Source Serif 4', serif;
- 
-    --space-s: 12px;
-    --space-m: 24px;
-    --space-l: 48px;
-}
- .container {
+        :root {
+            --color-text: #111111;
+            --color-bg: #ffffff;
+
+            --color-pink: #AB0782;
+            --color-olive: #7F750E;
+            --color-olive-dark: #6E660A;
+            --color-purple: #5F00AD;
+            --color-blue: #0034AD;
+
+            --font-main: 'Source Serif 4', serif;
+
+            --space-s: 12px;
+            --space-m: 24px;
+            --space-l: 48px;
+        }
+
+        .container {
             max-width: 80vw;
             margin: 3rem;
         }
@@ -112,8 +113,135 @@ body {
         }
 
 
+        /* BODY */
 
-</style>
+        .about__description {
+            font-size: 3rem;
+        }
+
+        .about__content {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-m);
+            margin-bottom: var(--space-l);
+        }
+
+        .about__label {
+
+            font-style: italic;
+            margin: 0;
+        }
+
+        .about__right {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .about__item {
+            border-top: 1px solid #dddddd;
+            padding: var(--space-s) 0;
+        }
+
+        .about__item p {
+            margin: 0;
+        }
+
+        .about__image {
+            margin-top: var(--space-m);
+        }
+
+        .about__image img {
+            width: 100%;
+        }
+
+        article {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        .project a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .project button {
+            color: inherit;
+            background-color: transparent;
+            border: 1px solid currentColor;
+        }
+
+
+        .project-info_abstract {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 40%;
+            color: #AB0782;
+        }
+
+        .project-info_magazine {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 40%;
+            color: #6E660A;
+        }
+
+        .project-info_castro {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 40%;
+            color: #0034AD;
+        }
+
+
+
+        .project-image {
+            width: 50%;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* FOOTER */
+
+        .footer-navigation {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 48px;
+            padding-top: 36px;
+            font-size: 3rem;
+            line-height: 1.4;
+            text-decoration: underline;
+        }
+
+        .footer-navigation a:nth-child(1) {
+            color: #AB0782;
+        }
+
+        .footer-navigation a:nth-child(2) {
+            color: #5F00AD;
+        }
+
+        .footer-navigation a:nth-child(3) {
+            color: #0034AD;
+        }
+
+        .footer__copyright {
+            font-size: 3rem;
+            line-height: 1.5;
+            font-weight: 400;
+            margin: 0;
+            max-width: 350px;
+        }
+    </style>
 </head>
 
 <body>
@@ -138,132 +266,138 @@ body {
         </header>
         <br>
         <br>
-        <main>
-            <section>
-                <h2>
-                    During my time at Aetheria School of Visual Arts, I had the opportunity to intern at Lumina Creative
-                    Studio and The Terraform Interiors Collective. These experiences allowed me to see design in action,
-                    collaborating with talented professionals and contributing to real-world projects. I learned
-                    invaluable lessons about the creative process, from concept development to final execution.
+        <main class="main">
+            <section class="about">
 
-                    I thrive in collaborative environments, where ideas can bounce and evolve. I love the challenge of
-                    taking a concept and translating it into a compelling visual experience. Whether I'm sketching,
-                    photographing, or designing, I'm always searching for ways to connect with people on a deeper level
-                    through my work.
-                </h2>
+                <div class="about__description">
+                    <p>
+                        During my time at Aetheria School of Visual Arts, I had the opportunity to intern at Lumina
+                        Creative
+                        Studio and The Terraform Interiors Collective. These experiences allowed me to see design in
+                        action,
+                        collaborating with talented professionals and contributing to real-world projects. I learned
+                        invaluable lessons about the creative process, from concept development to final execution.
+
+                        I thrive in collaborative environments, where ideas can bounce and evolve. I love the challenge
+                        of
+                        taking a concept and translating it into a compelling visual experience. Whether I'm sketching,
+                        photographing, or designing, I'm always searching for ways to connect with people on a deeper
+                        level
+                        through my work.
+                    </p>
+                </div>
+                    <div class="about__section">
+
+                        <div class="about__content">
+
+                            <div class="about__left">
+                                <p class="about__label">Right now I am...</p>
+                            </div>
 
 
-                <section>
+                            <div class="about__right">
 
-                    <div class="about__content">
+                                <div class="about__item">
+                                    <p>asfd to: Relationships by Haim</p>
+                                </div>
 
-                        <div class="about__left">
-                            <p class="about__label">Right now I am...</p>
+                                <div class="about__item">
+                                    <p>Dreaming of: Gohar World's dinner parties</p>
+                                </div>
+
+                                <div class="about__item">
+                                    <p>Eating at: Mcdonald's</p>
+                                </div>
+
+                                <div class="about__item">
+                                    <p>Training for: The NYC Marathon</p>
+                                </div>
+
+                                <div class="about__image">
+                                    <img src="./assets/images/Imageabout.png" alt="Image of the person">
+                                </div>
+
+                            </div>
+
                         </div>
+            </section>
 
+            <section class="projects">
 
-                        <div class="about__right">
-
-                            <div class="about__item">
-                                <p>asfd to: Relationships by Haim</p>
-                            </div>
-
-                            <div class="about__item">
-                                <p>Dreaming of: Gohar World's dinner parties</p>
-                            </div>
-
-                            <div class="about__item">
-                                <p>Eating at: Mcdonald's</p>
-                            </div>
-
-                            <div class="about__item">
-                                <p>Training for: The NYC Marathon</p>
-                            </div>
-
-                            <div class="about__image">
-                                <img src="./assets/images/Imageabout.png" alt="Image of the person">
-                            </div>
-
-                        </div>
-
-                    </div>
-                </section>
-
-                <section>
-
-                    <article>
+                <article class="another-project">
+                    <div>
                         <div>
-                            <div>
-                                <p>
-                                    From graphic design to interior spaces, see the breadth of my creative explorations.
-                                </p>
-                            </div>
-
-                            <div>
-                                <a href="./project.html">More projects</a>
-                            </div>
+                            <p>
+                                From graphic design to interior spaces, see the breadth of my creative explorations.
+                            </p>
                         </div>
 
-                    </article>
-
-                    <article>
-
-                        <div class="project-info_abstract">
-                            <a href="./artwork.html">Artwork</a>
-                            <h2>Abstract paintings</h2>
-                            <button type="Explore">
-                                Explore
-                            </button>
+                        <div>
+                            <a href="./project.html">More projects</a>
                         </div>
+                    </div>
 
-                        <div class="project-image">
-                            <img src="./assets/images/Imgabstract.png" alt="Abstract paintings artwork">
-                        </div>
+                </article>
 
-                    </article>
+                <article class="project">
 
-                    <br>
-                    <br>
+                    <div class="project-info_abstract">
+                        <a href="./artwork.html">Artwork</a>
+                        <h2>Abstract paintings</h2>
+                        <button type="Explore">
+                            Explore
+                        </button>
+                    </div>
 
-                    <article class="project">
-                        <div class="project-info_magazine">
-                            <a href="./design.html">Design</a>
-                            <h2>Magazine study</h2>
-                            <button type="Explore">
-                                Explore
-                            </button>
-                        </div>
-                        <div class="project-image">
-                            <img src="./assets/images/Imgmagazine.png" alt="Magazine study design project">
-                        </div>
+                    <div class="project-image">
+                        <img src="./assets/images/Imgabstract.png" alt="Abstract paintings artwork">
+                    </div>
 
-                    </article>
+                </article>
 
-                    <br>
-                    <br>
+                <br>
+                <br>
 
-                    <article class="project">
+                <article class="project">
+                    <div class="project-info_magazine">
+                        <a href="./design.html">Design</a>
+                        <h2>Magazine study</h2>
+                        <button type="Explore">
+                            Explore
+                        </button>
+                    </div>
+                    <div class="project-image">
+                        <img src="./assets/images/Imgmagazine.png" alt="Magazine study design project">
+                    </div>
 
-                        <div class="project-info_castro">
-                            <a href="./design.html">Design</a>
-                            <h2>Castro Capital branding</h2>
-                            <button type="Explore">
-                                Explore
-                            </button>
-                        </div>
+                </article>
+
+                <br>
+                <br>
+
+                <article class="project">
+
+                    <div class="project-info_castro">
+                        <a href="./design.html">Design</a>
+                        <h2>Castro Capital branding</h2>
+                        <button type="Explore">
+                            Explore
+                        </button>
+                    </div>
 
 
-                        <div class="project-image">
-                            <img src="./assets/images/Imgcastro.png" alt="Castro Capital branding project">
-                        </div>
+                    <div class="project-image">
+                        <img src="./assets/images/Imgcastro.png" alt="Castro Capital branding project">
+                    </div>
 
-                    </article>
-                </section>
+                </article>
+            </section>
             </section>
         </main>
-        <footer>
 
-            <nav>
+        <footer class="footer">
+
+            <nav class="footer-navigation">
 
 
                 <a href="https://www.figma.com/sites">Email</a>
@@ -272,10 +406,12 @@ body {
 
 
             </nav>
+            <div class="footer__copyright">
 
-            <h2>
-                © Sarah Chen 2025 All Rights Reserved
-            </h2>
+                <p>
+                    © Sarah Chen 2025 All Rights Reserved
+                </p>
+            </div>
 
         </footer>
     </div>
