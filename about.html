@@ -44,9 +44,7 @@
             --space-l: 48px;
         }
 
-        *,
-        *::before,
-        *::after {
+        * {
             box-sizing: border-box;
         }
 
@@ -65,8 +63,9 @@
         }
 
         .container {
-            max-width: 80vw;
-            margin: 3rem;
+            width: 100%;
+            padding: 0 20px;
+            margin: 0 auto;
         }
 
         h2 {
@@ -81,9 +80,9 @@
 
         .header {
             width: 100%;
-            padding: 30px 40px;
+            padding: var(--space-m) 0;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             justify-content: space-between;
             align-items: flex-start;
         }
@@ -94,14 +93,14 @@
             gap: 12px;
         }
 
-        .profile-image .img {
+        .profile-image img {
             width: 45px;
             height: 45px;
             object-fit: cover;
             border-radius: 50%;
         }
 
-        .profile-image .a {
+        .profile-image a {
             font-size: 18px;
             font-weight: 500;
         }
@@ -109,10 +108,12 @@
 
         .navigation {
             display: flex;
+            flex-direction: column;
+            align-items: flex-end;
             gap: 30px;
         }
 
-        .navigation .a {
+        .navigation a {
             font-size: 16px;
             text-decoration: none;
         }
@@ -121,11 +122,11 @@
             color: #AB0782;
         }
 
-        .navigation .a:nth-child(2) {
+        .navigation a:nth-child(2) {
             color: #7F750E;
         }
 
-        .navigation .a:nth-child(3) {
+        .navigation a:nth-child(3) {
             color: #5F00AD;
         }
 
@@ -136,21 +137,26 @@
 
         /* BODY */
 
+        .about__section {
+            padding-top: 80px;
+        }
         .about__description {
             font-size: 3rem;
+            border-top: 1px solid #4F4F4F;
         }
 
         .about__content {
+            font-size: 1.25rem;
             display: flex;
             flex-direction: column;
             gap: var(--space-m);
-            margin-bottom: var(--space-l);
+            margin-bottom: 20px;
+            border-top: 1px solid #4F4F4F
+        
         }
 
         .about__label {
-
-            font-style: italic;
-            margin: 0;
+            margin-bottom: 50px;
         }
 
         .about__right {
@@ -159,7 +165,7 @@
         }
 
         .about__item {
-            border-top: 1px solid #dddddd;
+            border-top: 1px solid #4F4F4F;
             padding: var(--space-s) 0;
         }
 
@@ -173,6 +179,27 @@
 
         .about__image img {
             width: 100%;
+        }
+
+
+
+
+        .projects {
+            display: flex;
+            flex-direction: column;
+            border-top: 1px solid #4F4F4F;
+            gap: var(--space-l);
+            margin-bottom: var(--space-l);
+        }
+
+        .another-project__description {
+            font-size: 3rem;
+            font-weight: 300;
+            margin: 0 0 var(--space-s);
+        }
+
+        .another-project a {
+            color: var(--color-text);
         }
 
         article {
@@ -200,6 +227,7 @@
             align-items: flex-start;
             width: 40%;
             color: #AB0782;
+            border-top: 1px solid #AB0782;
         }
 
         .project-info_magazine {
@@ -208,6 +236,7 @@
             align-items: flex-start;
             width: 40%;
             color: #6E660A;
+            border-top: 1px solid #6E660A;
         }
 
         .project-info_castro {
@@ -216,6 +245,7 @@
             align-items: flex-start;
             width: 40%;
             color: #0034AD;
+            border-top: 1px solid #0034AD;
         }
 
 
@@ -234,15 +264,7 @@
             margin-bottom: var(--space-l);
         }
 
-        .another-project p {
-            font-size: 2rem;
-            font-weight: 300;
-            margin: 0 0 var(--space-s);
-        }
 
-        .another-project a {
-            color: var(--color-text);
-        }
 
 
         /* FOOTER */
@@ -250,7 +272,7 @@
         footer {
             display: flex;
             flex-direction: column;
-            border-top: 1px solid #dddddd;
+            border-top: 1px solid #4F4F4F;
         }
 
         .footer-navigation {
@@ -306,14 +328,9 @@
                 gap: 20px;
             }
 
-            .about__description p {
-                font-size: 24px;
-            }
 
-            .another-project p {
-                font-size: 26px;
-                max-width: 80%;
-            }
+
+
 
             .project {
                 flex-direction: row;
@@ -337,6 +354,8 @@
                 width: 40%;
             }
 
+
+
             .footer-navigation {
                 flex-direction: row;
                 justify-content: space-between;
@@ -358,9 +377,6 @@
                 padding-right: 60px;
             }
 
-            .about__description p {
-                font-size: 32px;
-            }
 
             .about__content {
                 flex-direction: row;
@@ -375,10 +391,7 @@
                 width: 55%;
             }
 
-            .another-project p {
-                font-size: 32px;
-                max-width: 70%;
-            }
+
 
             .projects {
                 display: grid;
@@ -503,7 +516,7 @@
 
                 <article class="another-project">
                     <div>
-                        <div>
+                        <div class="another-project__description">
                             <p>
                                 From graphic design to interior spaces, see the breadth of my creative explorations.
                             </p>
@@ -532,9 +545,6 @@
 
                 </article>
 
-                <br>
-                <br>
-
                 <article class="project">
                     <div class="project-info_magazine">
                         <a href="./design.html">Design</a>
@@ -548,9 +558,6 @@
                     </div>
 
                 </article>
-
-                <br>
-                <br>
 
                 <article class="project">
 
