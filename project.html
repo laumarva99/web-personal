@@ -95,68 +95,6 @@
             align-items: flex-start;
         }
 
-        .artproject {
-            margin-bottom: var(--space-l);
-        }
-
-        .artproject h3 {
-            font-size: 14px;
-            font-weight: 400;
-            color: var(--color-purple);
-        }
-
-        h1 {
-            font-family: var(--font-main);
-            font-weight: 300;
-            font-size: 40px;
-            line-height: 110%;
-            letter-spacing: -0.045em;
-            color: var(--color-purple);
-            margin: 0 0 var(--space-s);
-        }
-
-        .project__text {
-            font-size: 3rem;
-            font-weight: 300;
-            line-height: 130%;
-            margin: 0;
-        }
-
-        .artwork {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-l);
-            margin-bottom: var(--space-l);
-        }
-
-        .artwork__photography {
-            width: 100%;
-        }
-
-        .artwork__photography img {
-            width: 100%;
-        }
-
-        .artwork__photography p {
-            font-size: 20px;
-            color: #666666;
-            margin: 6px 0 0;
-        }
-
-        .projects article {
-            margin-bottom: var(--space-l);
-        }
-
-        .another-project p {
-            font-size: 2rem;
-            font-weight: 300;
-            margin: 0 0 var(--space-s);
-        }
-
-        .another-project a {
-            color: var(--color-text);
-        }
-
         .profile-image {
             display: flex;
             align-items: center;
@@ -204,6 +142,71 @@
 
 
         /* BODY */
+        .artproject {
+            margin-bottom: var(--space-l);
+        }
+
+        .artproject h3 {
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--color-purple);
+        }
+
+        h1 {
+            font-family: var(--font-main);
+            font-weight: 300;
+            font-size: 40px;
+            line-height: 110%;
+            letter-spacing: -0.045em;
+            color: var(--color-purple);
+            margin: 0 0 var(--space-s);
+        }
+
+        .project__text {
+            font-size: 3rem;
+            font-weight: 300;
+            line-height: 130%;
+            margin: 0;
+        }
+
+        .artwork {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-l);
+            margin-bottom: var(--space-l);
+        }
+
+        .artwork__photography {
+            width: 100%;
+        }
+
+        .artwork__photography img {
+            width: auto;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .artwork__photography p {
+            font-size: 20px;
+            color: #666666;
+            margin: 6px 0 0;
+        }
+
+        .projects article {
+            margin-bottom: var(--space-l);
+        }
+
+        .another-project p {
+            font-size: 2rem;
+            font-weight: 300;
+            margin: 0 0 var(--space-s);
+        }
+
+        .another-project a {
+            color: var(--color-text);
+        }
+
 
         article {
             display: flex;
@@ -295,13 +298,143 @@
 
         .footer__copyright {
             font-size: 3rem;
-            line-height: 1.5;
-            font-weight: 400;
             margin: 0;
-            max-width: 350px;
+
         }
 
 
+        /* Media queries */
+
+
+        /* TABLET */
+
+        @media (min-width: 768px) {
+
+
+            h1 {
+                font-size: 56px;
+            }
+
+
+            .project__text {
+                font-size: 26px;
+                max-width: 80%;
+            }
+
+            .another-project p {
+                font-size: 26px;
+                max-width: 80%;
+            }
+
+            .header {
+                flex-direction: row;
+                align-items: center;
+            }
+
+
+
+            .foto1 {
+                width: 60%;
+                align-self: center;
+            }
+
+            .foto2 {
+                width: 70%;
+                align-self: flex-start;
+            }
+
+            .foto3 {
+                width: 75%;
+                align-self: flex-end;
+            }
+
+            .foto4 {
+                width: 70%;
+                align-self: flex-start;
+            }
+
+            .foto5 {
+                width: 45%;
+                align-self: center;
+            }
+
+            .foto6 {
+                width: 70%;
+                align-self: flex-start;
+            }
+
+
+
+
+            .project {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .project-info_abstract {
+                width: 40%;
+            }
+
+            .project-info_magazine {
+                width: 40%;
+            }
+
+            .project-info_castro {
+                width: 40%;
+            }
+
+            .project-image {
+                width: 55%;
+            }
+
+
+
+            .footer-navigation {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+             .footer-copyright {
+                flex-direction: row;
+                justify-content: space-between;
+                max-width: none;
+                white-space: nowrap;
+            }
+        
+        }
+
+        /* ORDENADOR */
+
+        @media (min-width: 1024px) {
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding-left: 60px;
+                padding-right: 60px;
+            }
+
+            h1 {
+                font-size: 72px;
+            }
+
+            .project__text {
+                font-size: 32px;
+                max-width: 70%;
+            }
+
+            .another-project p {
+                font-size: 32px;
+                max-width: 70%;
+            }
+
+            .artwork {
+                gap: 80px;
+            }
+
+            .project-image {
+                width: 50%;
+            }
+        }
     </style>
 </head>
 
@@ -337,17 +470,17 @@
 
             <section class="artwork">
 
-                <div class="artwork__photography">
+                <div class="artwork__photography foto1">
                     <img src="./assets/images/italy-1.png">
                     <p>Wandering and wondering, lost in the rhythm of the city.</p>
                 </div>
 
-                <div class="artwork__photography">
+                <div class="artwork__photography foto2">
                     <img src="./assets/images/italy-2.png">
                     <p>A symphony of motion and architecture, framed by history.</p>
                 </div>
 
-                <div class="artwork__photography">
+                <div class="artwork__photography foto3">
                     <img src="./assets/images/italy-3.png">
                     <p>A study in contrasts: light, shadow, and the rhythm of the game..</p>
                 </div>
@@ -357,17 +490,17 @@
                     through light and composition.
                 </p>
 
-                <div class="artwork__photography">
+                <div class="artwork__photography foto4">
                     <img src="./assets/images/italy-4.png">
                     <p>Dockside perspective, capturing the soul of the water.</p>
                 </div>
 
-                <div class="artwork__photography">
+                <div class="artwork__photography foto5">
                     <img src="./assets/images/italy-5.png">
                     <p>Venice, and a moment between two.</p>
                 </div>
 
-                <div class="artwork__photography">
+                <div class="artwork__photography foto6">
                     <img src="./assets/images/italy-6.png">
                     <p>A spontaneous rhythm, a shared moment, pure joy.</p>
                 </div>
