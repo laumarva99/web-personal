@@ -4,7 +4,305 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>(Project) Echoes of Italy — Sarah Chen</title>
+
+    <style>
+        @font-face {
+            font-family: 'Source Serif 4';
+            src: url('C:\Users\albi5\proyectos\web-personal\assets\fonts\SourceSerif4-VariableFont_opsz,wght.ttf') format('truetype');
+            font-weight: 200 900;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Source Serif 4';
+            src: url('../assets/fonts/SourceSerif4-VariableFont_opsz,wght.ttf') format('truetype');
+            font-weight: 200 900;
+            font-style: italic;
+            font-display: swap;
+        }
+
+        body {
+            font-family: 'Source Serif 4';
+        }
+
+        :root {
+            --color-text: #111111;
+            --color-bg: #ffffff;
+
+            --color-pink: #AB0782;
+            --color-olive: #7F750E;
+            --color-olive-dark: #6E660A;
+            --color-purple: #5F00AD;
+            --color-blue: #0034AD;
+
+            --font-main: 'Source Serif 4', serif;
+
+            --space-s: 12px;
+            --space-m: 24px;
+            --space-l: 48px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--font-main);
+            color: var(--color-text);
+            background-color: var(--color-bg);
+            line-height: 1.5;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            padding: 0 20px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 50px;
+            line-height: 120%;
+            letter-spacing: -0.045em;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        /* HEADER */
+
+        .header {
+            width: 100%;
+            padding: 30px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .artproject {
+            margin-bottom: var(--space-l);
+        }
+
+        .artproject h3 {
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--color-purple);
+        }
+
+        h1 {
+            font-family: var(--font-main);
+            font-weight: 300;
+            font-size: 40px;
+            line-height: 110%;
+            letter-spacing: -0.045em;
+            color: var(--color-purple);
+            margin: 0 0 var(--space-s);
+        }
+
+        .project__text {
+            font-size: 3rem;
+            font-weight: 300;
+            line-height: 130%;
+            margin: 0;
+        }
+
+        .artwork {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-l);
+            margin-bottom: var(--space-l);
+        }
+
+        .artwork__photography {
+            width: 100%;
+        }
+
+        .artwork__photography img {
+            width: 100%;
+        }
+
+        .artwork__photography p {
+            font-size: 20px;
+            color: #666666;
+            margin: 6px 0 0;
+        }
+
+        .projects article {
+            margin-bottom: var(--space-l);
+        }
+
+        .another-project p {
+            font-size: 2rem;
+            font-weight: 300;
+            margin: 0 0 var(--space-s);
+        }
+
+        .another-project a {
+            color: var(--color-text);
+        }
+
+        .profile-image {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .profile-image .img {
+            width: 45px;
+            height: 45px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .profile-image .a {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+
+        .navigation {
+            display: flex;
+            gap: 30px;
+        }
+
+        .navigation .a {
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .navigation a:nth-child(1) {
+            color: #AB0782;
+        }
+
+        .navigation .a:nth-child(2) {
+            color: #7F750E;
+        }
+
+        .navigation .a:nth-child(3) {
+            color: #5F00AD;
+        }
+
+        .navigation a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* BODY */
+
+        article {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        .project a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .project button {
+            color: inherit;
+            background-color: transparent;
+            border: 1px solid currentColor;
+            display: inline-block;
+        }
+
+
+        .project-info_abstract {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            color: #AB0782;
+        }
+
+        .project-info_magazine {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 40%;
+            color: #6E660A;
+        }
+
+        .project-info_castro {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 40%;
+            color: #0034AD;
+        }
+
+
+
+        .project-image {
+            width: 100%;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+
+
+        /* FOOTER */
+
+        footer {
+            display: flex;
+            flex-direction: column;
+            border-top: 1px solid #dddddd;
+        }
+
+        .footer-navigation {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 48px;
+            padding-top: 36px;
+            font-size: 3rem;
+            line-height: 1.4;
+            text-decoration: underline;
+        }
+
+        .footer-navigation a:nth-child(1) {
+            color: #AB0782;
+        }
+
+        .footer-navigation a:nth-child(2) {
+            color: #5F00AD;
+        }
+
+        .footer-navigation a:nth-child(3) {
+            color: #0034AD;
+        }
+
+        .footer__copyright {
+            font-size: 3rem;
+            line-height: 1.5;
+            font-weight: 400;
+            margin: 0;
+            max-width: 350px;
+        }
+
+
+    </style>
 </head>
 
 <body>
