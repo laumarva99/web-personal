@@ -230,7 +230,7 @@
         footer {
             display: flex;
             flex-direction: column;
-            border-top: 1px solid #dddddd;
+            border-top: 1px solid #4F4F4F;
         }
 
         .footer-navigation {
@@ -314,12 +314,13 @@
             .footer-navigation {
                 flex-direction: row;
                 justify-content: space-between;
-                gap: 0;
-                font-size: 20px;
             }
 
-            .footer__copyright {
-                font-size: 18px;
+            .footer-copyright {
+                flex-direction: row;
+                justify-content: space-between;
+                max-width: none;
+                white-space: nowrap;
             }
         }
 
@@ -339,7 +340,7 @@
                 max-width: 85%;
             }
 
-        
+
             .project-info {
                 width: 45%;
             }
@@ -358,16 +359,7 @@
             }
 
 
-            .footer-navigation {
-                flex-direction: row;
-                justify-content: space-between;
-            }
-             .footer-copyright {
-                flex-direction: row;
-                justify-content: space-between;
-                max-width: none;
-                white-space: nowrap;
-            }
+
         }
     </style>
 </head>
@@ -490,29 +482,30 @@
                     Discover my skills and passions
                 </button>
             </section>
+
+            <footer class="footer">
+
+                <nav class="footer-navigation">
+
+
+                    <a href="https://www.figma.com/sites">Email</a>
+                    <a href="https://www.figma.com/sites">Behance</a>
+                    <a href="http://linkedin.com/company/figma">LinkedIn</a>
+
+
+                </nav>
+                <div class="footer__copyright">
+
+                    <p>
+                        © Sarah Chen 2025 All Rights Reserved
+                    </p>
+                </div>
+
+            </footer>
+            
         </main>
     </div>
 
 </body>
-
-<footer class="footer">
-
-    <nav class="footer-navigation">
-
-
-        <a href="https://www.figma.com/sites">Email</a>
-        <a href="https://www.figma.com/sites">Behance</a>
-        <a href="http://linkedin.com/company/figma">LinkedIn</a>
-
-
-    </nav>
-    <div class="footer__copyright">
-
-        <p>
-            © Sarah Chen 2025 All Rights Reserved
-        </p>
-    </div>
-
-</footer>
 
 </html>
