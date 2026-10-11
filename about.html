@@ -113,7 +113,7 @@
             gap: 30px;
         }
 
-        .navigation .a {
+        .navigation a {
             font-size: 16px;
             text-decoration: none;
         }
@@ -122,11 +122,11 @@
             color: #AB0782;
         }
 
-        .navigation .a:nth-child(2) {
+        .navigation a:nth-child(2) {
             color: #7F750E;
         }
 
-        .navigation .a:nth-child(3) {
+        .navigation a:nth-child(3) {
             color: #5F00AD;
         }
 
@@ -137,21 +137,26 @@
 
         /* BODY */
 
+        .about__section {
+            padding-top: 80px;
+        }
         .about__description {
             font-size: 3rem;
+            border-top: 1px solid #4F4F4F;
         }
 
         .about__content {
+            font-size: 1.25rem;
             display: flex;
             flex-direction: column;
             gap: var(--space-m);
-            margin-bottom: var(--space-l);
+            margin-bottom: 20px;
+            border-top: 1px solid #4F4F4F
+        
         }
 
         .about__label {
-
-            font-style: italic;
-            margin: 0;
+            margin-bottom: 50px;
         }
 
         .about__right {
@@ -160,7 +165,7 @@
         }
 
         .about__item {
-            border-top: 1px solid #dddddd;
+            border-top: 1px solid #4F4F4F;
             padding: var(--space-s) 0;
         }
 
@@ -182,16 +187,17 @@
         .projects {
             display: flex;
             flex-direction: column;
+            border-top: 1px solid #4F4F4F;
             gap: var(--space-l);
             margin-bottom: var(--space-l);
         }
 
-        .another-project__description
-        {
+        .another-project__description {
             font-size: 3rem;
             font-weight: 300;
             margin: 0 0 var(--space-s);
         }
+
         .another-project a {
             color: var(--color-text);
         }
@@ -221,6 +227,7 @@
             align-items: flex-start;
             width: 40%;
             color: #AB0782;
+            border-top: 1px solid #AB0782;
         }
 
         .project-info_magazine {
@@ -229,6 +236,7 @@
             align-items: flex-start;
             width: 40%;
             color: #6E660A;
+            border-top: 1px solid #6E660A;
         }
 
         .project-info_castro {
@@ -237,6 +245,7 @@
             align-items: flex-start;
             width: 40%;
             color: #0034AD;
+            border-top: 1px solid #0034AD;
         }
 
 
@@ -255,7 +264,7 @@
             margin-bottom: var(--space-l);
         }
 
-       
+
 
 
         /* FOOTER */
@@ -263,7 +272,7 @@
         footer {
             display: flex;
             flex-direction: column;
-            border-top: 1px solid #dddddd;
+            border-top: 1px solid #4F4F4F;
         }
 
         .footer-navigation {
@@ -346,7 +355,7 @@
             }
 
 
-            
+
             .footer-navigation {
                 flex-direction: row;
                 justify-content: space-between;
@@ -382,7 +391,7 @@
                 width: 55%;
             }
 
-           
+
 
             .projects {
                 display: grid;
