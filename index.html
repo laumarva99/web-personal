@@ -41,13 +41,23 @@
             font-display: swap;
         }
 
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Source Serif 4';
+            margin: 0;
+            font-family: var(--font-main);
+            color: var(--color-text);
+            background-color: var(--color-bg);
+            line-height: 1.5;
         }
 
         .container {
-            max-width: 80vw;
-            margin: 3rem;
+            width: 100%;
+            padding: 0 20px;
+            margin: 0 auto;
         }
 
         h2 {
@@ -56,7 +66,6 @@
             font-weight: 300;
             font-size: 50px;
             line-height: 120%;
-            /* o 60px */
             letter-spacing: -0.045em;
         }
 
@@ -77,14 +86,14 @@
             gap: 12px;
         }
 
-        .profile-image .img {
+        .profile-image img {
             width: 45px;
             height: 45px;
             object-fit: cover;
             border-radius: 50%;
         }
 
-        .profile-image .a {
+        .profile-image a {
             font-size: 18px;
             font-weight: 500;
         }
@@ -95,21 +104,22 @@
             gap: 30px;
         }
 
-        .navigation .a {
-            font-size: 16px;
-            text-decoration: none;
-            font-size: 16px;
+        .navigation a {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 30px;
         }
 
         .navigation a:nth-child(1) {
             color: #AB0782;
         }
 
-        .navigation .a:nth-child(2) {
+        .navigation a:nth-child(2) {
             color: #7F750E;
         }
 
-        .navigation .a:nth-child(3) {
+        .navigation a:nth-child(3) {
             color: #5F00AD;
         }
 
@@ -118,13 +128,14 @@
 
         article {
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
             align-items: center;
             gap: 50px;
+            margin: 60px 0;
         }
 
         .project a {
-            text-decoration: none;
             color: inherit;
         }
 
@@ -140,6 +151,7 @@
             align-items: flex-start;
             width: 40%;
             color: #0034AD;
+            border-top: 1px solid #0034AD;
         }
 
         .project-info_abstract {
@@ -148,6 +160,7 @@
             align-items: flex-start;
             width: 40%;
             color: #AB0782;
+            border-top: 1px solid #AB0782;
         }
 
         .project-info_magazine {
@@ -156,6 +169,7 @@
             align-items: flex-start;
             width: 40%;
             color: #6E660A;
+            border-top: 1px solid #6E660A;
         }
 
         .project-info_photography {
@@ -164,6 +178,7 @@
             align-items: flex-start;
             width: 40%;
             color: #5F00AD;
+            border-top: 1px solid #5F00AD;
         }
 
         .project-info_castro {
@@ -172,6 +187,7 @@
             align-items: flex-start;
             width: 40%;
             color: #0034AD;
+            border-top: 1px solid #0034AD;
         }
 
 
@@ -184,6 +200,65 @@
             width: 100%;
             height: auto;
             display: block;
+        }
+
+        .about-me {
+            margin: 80px 0 100px;
+        }
+
+        .about-me h2 {
+            line-height: 125%;
+            letter-spacing: -0.02em;
+            margin: 0 0 40px;
+        }
+
+        .closing__button {
+            color: #111111;
+            background-color: transparent;
+            border: 1px solid #111111;
+            padding: 2px 8px;
+            cursor: pointer;
+        }
+
+        .closing__button:hover {
+            background-color: #111111;
+            color: #ffffff;
+        }
+
+        /* FOOTER */
+
+        footer {
+            display: flex;
+            flex-direction: column;
+            border-top: 1px solid #4F4F4F;
+        }
+
+        .footer-navigation {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 48px;
+            padding-top: 36px;
+            font-size: 3rem;
+            line-height: 1.4;
+            text-decoration: underline;
+        }
+
+        .footer-navigation a:nth-child(1) {
+            color: #AB0782;
+        }
+
+        .footer-navigation a:nth-child(2) {
+            color: #5F00AD;
+        }
+
+        .footer-navigation a:nth-child(3) {
+            color: #0034AD;
+        }
+
+        .footer__copyright {
+            font-size: 3rem;
+            margin: 0;
         }
     </style>
 </head>
@@ -204,7 +279,7 @@
 
                 <a href="./home.html">Home</a>
                 <a href="./about.html">About</a>
-                <a href="https://figma.com/sites">Contact</a>
+                <a href="mailto:email@ejemplo.com">Contact</a>
 
             </nav>
 
@@ -235,11 +310,6 @@
 
                 </article>
 
-                <br>
-                <br>
-
-
-
                 <article class="project">
 
                     <div class="project-info_abstract">
@@ -256,9 +326,6 @@
 
                 </article>
 
-                <br>
-                <br>
-
                 <article class="project">
                     <div class="project-info_magazine">
                         <a href="./design.html">Design</a>
@@ -273,9 +340,6 @@
 
                 </article>
 
-                <br>
-                <br>
-
                 <article class="project">
                     <div class="project-info_photography">
                         <a href="./photography.html">Photography</a>
@@ -289,9 +353,6 @@
                         <img src="./assets/images/Imgphotography.png" alt="Photography project Echoes of Italy">
                     </div>
                 </article>
-
-                <br>
-                <br>
 
                 <article class="project">
 
@@ -312,26 +373,22 @@
 
             </section>
 
-            <br>
-            <br>
-            <br>
-
-            <section>
+            <section class="about-me">
                 <h2>I'm dedicated to crafting meaningful visual experiences through a multidisciplinary design approach.
                 </h2>
                 <br>
-                <button type="Explore">
+                <button type="button" class="closing__button">
                     Discover my skills and passions
                 </button>
             </section>
-            <br>
-            <br>
+        </main>
+    </div>
 
 </body>
 
 <footer class="footer">
 
-    <nav>
+    <nav class="footer-navigation">
 
 
         <a href="https://www.figma.com/sites">Email</a>
@@ -340,10 +397,12 @@
 
 
     </nav>
+    <div class="footer__copyright">
 
-    <h2>
-        © Sarah Chen 2025 All Rights Reserved
-    </h2>
+        <p>
+            © Sarah Chen 2025 All Rights Reserved
+        </p>
+    </div>
 
 </footer>
 
