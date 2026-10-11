@@ -44,9 +44,7 @@
             --space-l: 48px;
         }
 
-        *,
-        *::before,
-        *::after {
+        * {
             box-sizing: border-box;
         }
 
@@ -65,8 +63,9 @@
         }
 
         .container {
-            max-width: 80vw;
-            margin: 3rem;
+            width: 100%;
+            padding: 0 20px;
+            margin: 0 auto;
         }
 
         h2 {
@@ -81,9 +80,9 @@
 
         .header {
             width: 100%;
-            padding: 30px 40px;
+            padding: var(--space-m) 0;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             justify-content: space-between;
             align-items: flex-start;
         }
@@ -94,14 +93,14 @@
             gap: 12px;
         }
 
-        .profile-image .img {
+        .profile-image img {
             width: 45px;
             height: 45px;
             object-fit: cover;
             border-radius: 50%;
         }
 
-        .profile-image .a {
+        .profile-image a {
             font-size: 18px;
             font-weight: 500;
         }
@@ -109,6 +108,8 @@
 
         .navigation {
             display: flex;
+            flex-direction: column;
+            align-items: flex-end;
             gap: 30px;
         }
 
@@ -175,6 +176,26 @@
             width: 100%;
         }
 
+
+
+
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-l);
+            margin-bottom: var(--space-l);
+        }
+
+        .another-project__description
+        {
+            font-size: 3rem;
+            font-weight: 300;
+            margin: 0 0 var(--space-s);
+        }
+        .another-project a {
+            color: var(--color-text);
+        }
+
         article {
             display: flex;
             justify-content: space-between;
@@ -234,15 +255,7 @@
             margin-bottom: var(--space-l);
         }
 
-        .another-project p {
-            font-size: 2rem;
-            font-weight: 300;
-            margin: 0 0 var(--space-s);
-        }
-
-        .another-project a {
-            color: var(--color-text);
-        }
+       
 
 
         /* FOOTER */
@@ -306,14 +319,9 @@
                 gap: 20px;
             }
 
-            .about__description p {
-                font-size: 24px;
-            }
 
-            .another-project p {
-                font-size: 26px;
-                max-width: 80%;
-            }
+
+
 
             .project {
                 flex-direction: row;
@@ -337,6 +345,8 @@
                 width: 40%;
             }
 
+
+            
             .footer-navigation {
                 flex-direction: row;
                 justify-content: space-between;
@@ -358,9 +368,6 @@
                 padding-right: 60px;
             }
 
-            .about__description p {
-                font-size: 32px;
-            }
 
             .about__content {
                 flex-direction: row;
@@ -375,10 +382,7 @@
                 width: 55%;
             }
 
-            .another-project p {
-                font-size: 32px;
-                max-width: 70%;
-            }
+           
 
             .projects {
                 display: grid;
@@ -503,7 +507,7 @@
 
                 <article class="another-project">
                     <div>
-                        <div>
+                        <div class="another-project__description">
                             <p>
                                 From graphic design to interior spaces, see the breadth of my creative explorations.
                             </p>
@@ -532,9 +536,6 @@
 
                 </article>
 
-                <br>
-                <br>
-
                 <article class="project">
                     <div class="project-info_magazine">
                         <a href="./design.html">Design</a>
@@ -548,9 +549,6 @@
                     </div>
 
                 </article>
-
-                <br>
-                <br>
 
                 <article class="project">
 
