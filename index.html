@@ -230,7 +230,7 @@
         footer {
             display: flex;
             flex-direction: column;
-            border-top: 1px solid #4F4F4F;
+            border-top: 1px solid #dddddd;
         }
 
         .footer-navigation {
@@ -259,6 +259,115 @@
         .footer__copyright {
             font-size: 3rem;
             margin: 0;
+
+        }
+
+
+        /* Media queries */
+
+
+        /* TABLET */
+
+        @media (min-width: 768px) {
+
+            .container {
+                padding: 0 40px;
+            }
+
+
+            .header {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .navigation {
+                flex-direction: row;
+                gap: 20px;
+            }
+
+            .intro h2 {
+                font-size: 28px;
+                max-width: 90%;
+            }
+
+            .project {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 40px;
+            }
+
+            .project-info {
+                width: 55%;
+            }
+
+            .project-info h2 {
+                font-size: 26px;
+            }
+
+            .project-image {
+                width: 35%;
+            }
+
+
+            .footer-navigation {
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 0;
+                font-size: 20px;
+            }
+
+            .footer__copyright {
+                font-size: 18px;
+            }
+        }
+
+
+        /* ORDENADOR */
+
+        @media (min-width: 1024px) {
+
+            .container {
+                max-width: 1200px;
+                padding-left: 60px;
+                padding-right: 60px;
+            }
+
+            .intro h2 {
+                font-size: 36px;
+                max-width: 85%;
+            }
+
+        
+            .project-info {
+                width: 45%;
+            }
+
+            .project-info h2 {
+                font-size: 32px;
+            }
+
+            .project-image {
+                width: 45%;
+            }
+
+            .closing__button {
+                font-size: 16px;
+                padding: 4px 12px;
+            }
+
+
+            .footer-navigation {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+             .footer-copyright {
+                flex-direction: row;
+                justify-content: space-between;
+                max-width: none;
+                white-space: nowrap;
+            }
         }
     </style>
 </head>

@@ -272,7 +272,7 @@
         footer {
             display: flex;
             flex-direction: column;
-            border-top: 1px solid #4F4F4F;
+            border-top: 1px solid #dddddd;
         }
 
         .footer-navigation {
@@ -301,6 +301,7 @@
         .footer__copyright {
             font-size: 3rem;
             margin: 0;
+
         }
 
 
@@ -356,13 +357,15 @@
 
 
 
-            .footer-navigation {
+           .footer-navigation {
                 flex-direction: row;
                 justify-content: space-between;
             }
-
-            .footer__copyright {
-                font-size: 16px;
+             .footer-copyright {
+                flex-direction: row;
+                justify-content: space-between;
+                max-width: none;
+                white-space: nowrap;
             }
         }
 
