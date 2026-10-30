@@ -5,13 +5,11 @@ function contar(nombre) {
   const saludo = document.getElementById("saludo");
 
   if (visitas === 1) {
-    saludo.innerHTML = "Hola " + nombre + ", es tu primera visita";
+    saludo.textContent = "Hola " + nombre + ", es tu primera visita";
+  } else if (visitas === 2) {
+    saludo.textContent = "Hola " + nombre + ", es tu segunda visita";
   } else {
-    else if (visitas ===  2) {
-      saludo.innerHTML = "Hola " + nombre + ", es tu segunda visita";
-    } else {
-      saludo.innerHTML = "Hola " + nombre + ", ya llevas " + visitas + " visitas";
-    }
+    saludo.textContent = "Hola " + nombre + ", ya llevas " + visitas + " visitas";
   }
 
   try {
