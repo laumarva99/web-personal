@@ -26,7 +26,6 @@
 
 
 body {
-    font-family: 'Source Serif 4';
     margin: 0;
     font-family: var(--font-main);
     color: var(--color-text);
@@ -48,7 +47,6 @@ img {
 }
 
 h2 {
-    font-family: 'Source Serif 4';
     font-style: normal;
     font-weight: 300;
     font-size: 50px;
@@ -293,10 +291,6 @@ article {
     font-size: 3rem;
     font-weight: 300;
     margin: 0 0 var(--space-s);
-}
-
-.another-project a {
-    color: var(--color-text);
 }
 
 
