@@ -1,3 +1,12 @@
+@font-face {
+    font-family: "Source Serif 4";
+    src: url("../assets/fonts/SourceSerif4-VariableFont_opszwght.ttf") format("truetype");
+    font-weight: 200 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 :root {
     --color-text: #111111;
     --color-bg: #ffffff;
@@ -24,13 +33,17 @@
 }
 
 
+.container {
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+}
 
 body {
     margin: 0;
     font-family: var(--font-main);
     color: var(--color-text);
     background-color: var(--color-bg);
-    line-height: 1.5;
 }
 
 img {
@@ -40,11 +53,7 @@ img {
 }
 
 
-.container {
-    width: 100%;
-    padding: 0 20px;
-    margin: 0 auto;
-}
+
 
 h2 {
     font-style: normal;
@@ -69,6 +78,7 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: var(--space-l);
 }
 
 
@@ -95,7 +105,7 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 30px;
+    gap: 27px;
 }
 
 .navigation a {
@@ -127,65 +137,67 @@ article {
     margin: 60px 0;
 }
 
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--space-l);
+    padding-bottom: var(--space-l);
+    border-top: 1px solid var(--project-color);
+    color: var(--project-color);
+}
+
+.project--yoga {
+    --project-color: var(--color-blue);
+}
+
+.project--abstract {
+    --project-color: var(--color-pink);
+}
+
+.project--magazine {
+    --project-color: var(--color-olive-dark);
+}
+
+.project--photography {
+    --project-color: var(--color-purple);
+}
+
+.project--castro {
+    --project-color: var(--color-blue);
+}
+
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.project__category {
+    text-decoration: underline;
+}
+
 .project a {
     color: inherit;
 }
 
-.project button {
-    color: inherit;
-    background-color: transparent;
+.project__button {
+    display: inline-block;
+    padding: 2px 8px;
     border: 1px solid currentColor;
+    text-decoration: none;
 }
 
-.project-info_yoga {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 40%;
-    color: var(--color-blue);
-    border-top: 1px solid var(--color-blue);
+.project__button:hover {
+    text-decoration: underline;
 }
-
-.project-info_abstract {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 40%;
-    color: var(--color-pink);
-    border-top: 1px solid var(--color-pink);
-}
-
-.project-info_magazine {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 40%;
-    color: var(--color-olive-dark);
-    border-top: 1px solid var(--color-olive-dark);
-}
-
-.project-info_photography {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 40%;
-    color: var(--color-purple);
-    border-top: 1px solid var(--color-purple);
-}
-
-.project-info_castro {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 40%;
-    color: var(--color-blue);
-    border-top: 1px solid var(--color-blue);
-}
-
 
 
 .project-image {
-    width: 50%;
+    display: flex;
 }
 
 .project-image img {
@@ -198,8 +210,12 @@ article {
     margin-bottom: var(--space-l);
 }
 
+
+
 .about-me {
     margin: 80px 0 100px;
+    padding-top: var(--space-l);
+    padding-bottom: var(--space-l);
 }
 
 .about-me h2 {
@@ -209,7 +225,7 @@ article {
 }
 
 .closing__button {
-    color: #111111;
+    color: var(--color-text);
     background-color: transparent;
     border: 1px solid var(--color-text);
     padding: 2px 8px;
@@ -228,7 +244,8 @@ article {
 
 .about__description {
     font-size: 3rem;
-    border-top: 1px solid var(--color-text);
+    padding-top: var(--space-l);
+    padding-bottom: var(--space-s);
 }
 
 .about__content {
@@ -242,6 +259,8 @@ article {
 
 .about__label {
     margin-bottom: 50px;
+    padding-top: var(--space-m);
+    padding-bottom: var(--space-l);
 }
 
 .about__right {
@@ -251,7 +270,8 @@ article {
 
 .about__item {
     border-top: 1px solid var(--color-text);
-    padding: var(--space-s) 0;
+    padding-top: var(--space-m);
+    padding-bottom: var(--space-m);
 }
 
 .about__item p {
@@ -260,6 +280,7 @@ article {
 
 .about__image {
     margin-top: var(--space-m);
+    padding-bottom: var(--space-m);
 }
 
 .about__image img {
@@ -274,7 +295,7 @@ article {
     flex-direction: column;
     border-top: 1px solid var(--color-text);
     gap: var(--space-l);
-    margin-bottom: var(--space-l);
+    margin-bottom: var(--space-m);
 }
 
 .another-project p {
@@ -301,8 +322,61 @@ article {
 .artproject h3 {
     font-size: 14px;
     font-weight: 400;
+    text-decoration: underline;
     color: var(--color-purple);
 }
+
+.artproject h1 {
+    font-family: var(--font-main);
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 110%;
+    letter-spacing: -0.045em;
+    color: var(--color-purple);
+    padding-top: var(--space-s);
+    margin: 0 0 var(--space-s);
+}
+
+
+.project__text {
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 130%;
+    margin: 0;
+     padding-bottom: var(--space-m);
+}
+
+
+.artwork {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-l);
+    margin-bottom: var(--space-l);
+    
+}
+
+
+.artwork__photography {
+    width: 100%;
+    padding-top: var(--space-m);
+    padding-bottom: var(--space-m);
+}
+
+
+.artwork__photography img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+
+.artwork__photography p {
+    font-size: 15px;
+    color: #666666;
+    margin: 6px 0 0;
+}
+
 
 /* FOOTER */
 
@@ -316,6 +390,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    padding-bottom: var(--space-l);
     gap: 48px;
     padding-top: 36px;
     font-size: 3rem;
@@ -338,6 +413,7 @@ footer {
 .footer__copyright {
     font-size: 3rem;
     margin: 0;
+    padding-top: var(--space-l);
 
 }
 
@@ -401,6 +477,55 @@ footer {
         max-width: none;
         white-space: nowrap;
     }
+
+    .project__text {
+        font-size: 26px;
+        max-width: 80%;
+    }
+
+
+    .another-project p {
+        font-size: 26px;
+        max-width: 80%;
+    }
+
+
+
+    .foto1 {
+        width: 60%;
+        align-self: center;
+    }
+
+
+    .foto2 {
+        width: 70%;
+        align-self: flex-start;
+    }
+
+
+    .foto3 {
+        width: 75%;
+        align-self: flex-end;
+    }
+
+
+    .foto4 {
+        width: 70%;
+        align-self: flex-start;
+    }
+
+
+    .foto5 {
+        width: 45%;
+        align-self: center;
+    }
+
+
+    .foto6 {
+        width: 70%;
+        align-self: flex-start;
+    }
+
 }
 
 
